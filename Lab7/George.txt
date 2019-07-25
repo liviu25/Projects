@@ -1,0 +1,48 @@
+Tema: 3
+Nota: 6
+Predata in saptamana: 8
+Deadline: 7
+Feedback: sdghjgkhjl
+
+Tema: 4
+Nota: 1
+Predata in saptamana: 11
+Deadline: 8
+Feedback: null
+
+Tema: 1
+Nota: 1
+Predata in saptamana: 11
+Deadline: 5
+Feedback: sdfg
+
+Tema: 2
+Nota: 1
+Predata in saptamana: 11
+Deadline: 6
+Feedback: ghv
+
+Tema: 3
+Nota: 1
+Predata in saptamana: 11
+Deadline: 7
+Feedback: gv
+
+Tema: 2
+Nota: 1
+Predata in saptamana: 13
+Deadline: 6
+Feedback: zxcv
+
+Tema: 3
+Nota: 1
+Predata in saptamana: 16
+Deadline: 7
+Feedback: asdfd
+
+Tema: 3
+Nota: 1
+Predata in saptamana: 16
+Deadline: 7
+Feedback: 
+

@@ -1,0 +1,4 @@
+1,lenovo,model,gaming,5
+2,producator,model,gaming,5
+3,lenovo,model,business,7
+

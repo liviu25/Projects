@@ -1,0 +1,5 @@
+Tema: 2
+Nota: 3
+Predata in saptamana: 8
+Deadline: 6
+Feedback: dsgdbgd

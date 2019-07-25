@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="jdbcProps" location="classpath:bd.config"/>
+
+    <bean id="loginRepository" class="concurs.repository.LoginRepository">
+
+        <constructor-arg ref="jdbcProps">
+
+        </constructor-arg>
+    </bean>
+
+    <bean id="participantDbRepository" class="concurs.repository.ParticipantDbRepository">
+        <constructor-arg ref="jdbcProps">
+
+        </constructor-arg>
+    </bean>
+
+    <bean id="probaDbRepository" class="concurs.repository.ProbaDbRepository">
+        <constructor-arg ref="jdbcProps">
+
+        </constructor-arg>
+    </bean>
+
+    <bean id="inscriereDbRepository" class="concurs.repository.InscriereDbRepository">
+        <constructor-arg ref="jdbcProps">
+
+        </constructor-arg>
+    </bean>
+
+    <bean id="concursServer" class="concurs.server.ConcursServer">
+
+        <constructor-arg index="0" ref="loginRepository"/>
+        <constructor-arg index="1" ref="participantDbRepository"/>
+        <constructor-arg index="2" ref="probaDbRepository"/>
+        <constructor-arg index="3" ref="inscriereDbRepository"/>
+    </bean>
+
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+
+        <property name="serviceName" value="Concurs"/>
+        <property name="service" ref="concursServer"/>
+        <property name="serviceInterface" value="concurs.service.IServer"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+</beans>

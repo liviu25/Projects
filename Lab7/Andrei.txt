@@ -1,0 +1,41 @@
+Tema: 2
+Nota: 3
+Predata in saptamana: 8
+Deadline: 6
+Feedback: dsgdbgd
+Tema: 3
+Nota: 1
+Predata in saptamana: 11
+Deadline: 7
+Feedback: afdsgd
+
+Tema: 4
+Nota: 1
+Predata in saptamana: 12
+Deadline: 8
+Feedback: feddback
+
+Tema: 3
+Nota: 1
+Predata in saptamana: 12
+Deadline: 7
+Feedback: 
+
+Tema: 2
+Nota: 1
+Predata in saptamana: 12
+Deadline: 6
+Feedback: asdf
+
+Tema: 1
+Nota: 1
+Predata in saptamana: 12
+Deadline: 5
+Feedback: zxc
+
+Tema: 1
+Nota: 1
+Predata in saptamana: 16
+Deadline: 5
+Feedback: afd
+

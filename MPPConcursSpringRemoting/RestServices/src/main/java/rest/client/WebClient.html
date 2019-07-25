@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        #probeTable tr:hover{
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body >
+
+    <table id="probeTable">
+
+        <thead>
+            <th>Id</th>
+            <th>TipProba</th>
+            <th>VarstaMin</th>
+            <th>VarstaMax</th>
+            <th>NrParticipanti</th>
+        </thead>
+    </table>
+    <br>
+    <div>
+        <form id="form1">
+            Id:<input id="id" type="text"><br>
+            TipProba:
+            <select id="tipProba">
+                <option value="desen">desen</option>
+                <option value="poezie">poezie</option>
+                <option value="cautare_comori">cautare_comori</option>
+            </select><br>
+            Varsta Min:<input id="varstaMin" type="text"><br>
+            Varsta Max:<input id="varstaMax" type="text"><br>
+            Nr Participanti:<input id="nrParticipanti" type="text"><br>
+
+            <input type="button" id="addButton" value="Add">
+            <input type="button" id="deleteButton" value="Delete">
+
+        </form>
+
+    </div>
+
+    <script>
+
+        function loadList()
+        {
+            $("#probeTable").find("tbody").html("");
+            $.get("http://localhost:8080/probe", function (probe) {
+                $.each(probe,function () {
+                    $("#probeTable").append("<tr>" +
+                        "<td>"+this["id"]+"</td>" +
+                        "<td>"+this["tipProba"]+"</td>" +
+                        "<td>"+this["varstaMin"] +"</td>" +
+                        "<td>"+this["varstaMax"] +"</td>" +
+                        "<td>"+ this["nrParticipanti"]+"</td>" +
+                        "</tr>");
+                })
+
+            });
+            setTimeout(
+            function()
+            {
+                $("#probeTable").find("tr").each(function () {
+                    $(this).click(function () {
+                        $("#id").val($(this).children(":nth-child(1)").html());
+                        $("#tipProba").val($(this).children(":nth-child(2)").html());
+                        $("#varstaMin").val($(this).children(":nth-child(3)").html());
+                        $("#varstaMax").val($(this).children(":nth-child(4)").html());
+                        $("#nrParticipanti").val($(this).children(":nth-child(5)").html());
+                    })
+                })
+            }, 1000);
+        }
+
+
+        $(document).ready(function() {
+
+            loadList();
+
+        });
+
+        $("#addButton").click(function () {
+            var id = $("#id").val();
+            var tipProba = $("#tipProba").val();
+            var varstaMin = $("#varstaMin").val();
+            var varstaMax = $("#varstaMax").val();
+            var nrParticipanti = $("#nrParticipanti").val();
+            var proba={};
+            proba["id"]=id;
+            proba["tipProba"]=tipProba;
+            proba["varstaMin"]=varstaMin;
+            proba["varstaMax"]=varstaMax;
+            proba["nrParticipanti"]=nrParticipanti;
+
+
+            $.ajax({
+                type: 'post',
+                url: 'http://localhost:8080/probe',
+                data: JSON.stringify(proba),
+                contentType: "application/json; charset=utf-8",
+                traditional: true,
+                success: function () {
+                    loadList();
+                }
+            });
+
+        });
+
+        $("#deleteButton").click(function () {
+            var id = $("#id").val();
+            $.ajax({
+                url: "http://localhost:8080/probe/"+id,
+                type: 'DELETE',
+                success: function() {
+                    loadList();
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+rootProject.name = 'MPPConcursSpringRemoting'
+include 'Model'
+include 'Repository'
+include 'Service'
+include 'Client'
+include 'Server'
+include 'RestServices'
+

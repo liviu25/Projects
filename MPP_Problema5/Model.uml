@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Model</OriginalElement>
+  <nodes>
+    <node x="0.0" y="112.0">Model.Inscriere</node>
+    <node x="237.0" y="101.0">Model.Proba</node>
+    <node x="341.0" y="0.0">Model.HasID</node>
+    <node x="545.0" y="101.0">Model.Participant</node>
+    <node x="0.0" y="309.0">Model.TipProba</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Model.Participant" target="Model.HasID">
+      <point x="0.0" y="-81.5" />
+      <point x="690.5" y="76.0" />
+      <point x="407.6666666666667" y="76.0" />
+      <point x="26.666666666666686" y="25.5" />
+    </edge>
+    <edge source="Model.Proba" target="Model.HasID">
+      <point x="0.0" y="-81.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="Model.Inscriere" target="Model.HasID">
+      <point x="0.0" y="-70.5" />
+      <point x="108.5" y="76.0" />
+      <point x="354.3333333333333" y="76.0" />
+      <point x="-26.666666666666686" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="418.0" y="202.0" />
+  <SelectedNodes>
+    <node>Model.Participant</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

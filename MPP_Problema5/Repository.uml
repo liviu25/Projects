@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Repository</OriginalElement>
+  <nodes>
+    <node x="0.0" y="446.0">Repository.ParticipantDbRepository</node>
+    <node x="788.0" y="189.0">Repository.InscriereDbRepository</node>
+    <node x="375.0" y="267.0">Repository.IProbaRepository</node>
+    <node x="0.0" y="720.0">Repository.JdbcUtils</node>
+    <node x="375.0" y="446.0">Repository.ProbaDbRepository</node>
+    <node x="0.0" y="267.0">Repository.IParticipantRepository</node>
+    <node x="482.5" y="0.0">Repository.JRepository</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Repository.IParticipantRepository" target="Repository.JRepository">
+      <point x="0.0" y="-25.5" />
+      <point x="177.5" y="164.0" />
+      <point x="512.1666666666667" y="164.0" />
+      <point x="-59.333333333333314" y="69.5" />
+    </edge>
+    <edge source="Repository.ParticipantDbRepository" target="Repository.IParticipantRepository">
+      <point x="0.0" y="-114.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="Repository.IProbaRepository" target="Repository.JRepository">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="69.5" />
+    </edge>
+    <edge source="Repository.InscriereDbRepository" target="Repository.JRepository">
+      <point x="0.0" y="-103.5" />
+      <point x="913.0" y="164.0" />
+      <point x="630.8333333333334" y="164.0" />
+      <point x="59.33333333333337" y="69.5" />
+    </edge>
+    <edge source="Repository.ProbaDbRepository" target="Repository.IProbaRepository">
+      <point x="0.0" y="-114.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9234513274336281" x="560.7561092477242" y="334.1063727839004" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
